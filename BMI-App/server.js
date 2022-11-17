@@ -1,6 +1,6 @@
 const express = require("express")                               //import express module
 const bodyParser = require('body-parser')                       // import bodyParser module (helps accesssing the form data)
- 
+
 const app = express()
 app.use(bodyParser.urlencoded({extended: true}))               // lets access the form data using "request.body"
 
@@ -16,6 +16,7 @@ app.post("/bmi",function(request,response){
     const bmi = w / ( h * h )                                         //calculating the sum
     response.send("Your BMI is " +bmi)                    //sending the response
 })
+
 
 app.listen(8080, function(){
     console.log("Server Started at 8080") 
